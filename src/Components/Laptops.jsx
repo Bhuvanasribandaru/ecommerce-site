@@ -32,9 +32,10 @@ const Laptops = () => {
           products.map((product) => (
             <div key={product.id} className="product-card">
               <img
-                src={${BASE_URL}/api/products/images/${product.imagePath}}
+                 src={`${BASE_URL}/api/products/images/${product.imagePath}`}
                 alt={product.name}
               />
+
               <h4>{product.name}</h4>
               <p>${product.price.toFixed(2)}</p>
               <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
